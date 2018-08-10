@@ -9,6 +9,7 @@
 
 function palindrome(str) {
 
+<<<<<<< HEAD
     // for (let index = 0; index < str.length; index++) {
 
     //     if (str[index] !== str[str.length - index - 1])
@@ -29,6 +30,7 @@ function palindrome(str) {
     return str.split('').every((element, i) => element === str[str.length - i - 1]);
 
 }
+
 
 
 

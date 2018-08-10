@@ -10,6 +10,7 @@
 
 function reverseInt(n) {
 
+<<<<<<< HEAD
     // if (n === 0) return 0;
     // else if (n > 0) {
 
@@ -25,6 +26,7 @@ function reverseInt(n) {
 
     console.log(' - ', reversed);
     return parseInt(reversed) * Math.sign(n);
+
 
 
 }

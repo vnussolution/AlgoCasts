@@ -7,6 +7,7 @@
 
 function maxChar(str) {
 
+<<<<<<< HEAD
     // let max = 0;
     // let count = 0;
     // let letter = '';
@@ -54,7 +55,6 @@ function maxChar(str) {
 
     console.log('obj : ', obj, ' letter = ', letter);
     return obj;
-
 }
 
 module.exports = maxChar;
