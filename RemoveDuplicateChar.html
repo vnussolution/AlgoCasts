@@ -1,0 +1,70 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>The HTML5 Herald</title>
+    <meta name="description" content="The HTML5 Herald">
+
+
+</head>
+
+<body>
+    <h1>Remove duplicates</h1>
+    <script>
+
+        // use hashtable to solve duplicate chars in string problem
+        function removeDup(s) {
+            // create an empty obj
+            let obj = {};
+
+            // loop through each char in the string
+            for (const o of s) {
+                //use javascript technique to create a key and
+                // at the same time assign the counter
+                // it doesn't have to be a counter, you can just assign an empty string
+                // 
+                obj[o] = obj[o] + 1 || 1;
+            }
+            // 
+            return Object.keys(obj).join('');
+        }
+
+        // use nested for loops for solve duplicate chars in string problem
+        function removeDup2(s) {
+            // declare output as a string you want to return which is unique string;
+            // add first char to output 
+            let output = s[0];
+
+            // scan the entire string
+            for (let i = 1; i < s.length; i++) {
+
+                // declare a flag to indicate if duplicate is found
+                let found = false;
+
+                // for each char of string, you scan the entire unique string, output
+                for (let j = 0; j < output.length; j++) {
+
+                    // if duplicate is found , set the flag to true, and break the loop
+                    if (s[i] === output[j]) {
+                        found = true;
+                        break;
+                    }
+                }
+
+                // check the flag if duplicate found, if not add the current char
+                if (!found) {
+                    output += s[i];
+                }
+            }
+            return output;
+        }
+        console.log('--- ', removeDup('llegalla'));
+        console.log('--- 2', removeDup2('llegalla'));
+
+    </script>
+</body>
+
+</html>

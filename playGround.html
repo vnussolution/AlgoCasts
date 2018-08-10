@@ -1,0 +1,38 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>The HTML5 Herald</title>
+  <meta name="description" content="The HTML5 Herald">
+
+
+</head>
+
+<body>
+  <script>
+    function playGround(n) { //3
+
+      const stars = n * 2 - 1; // stars=5
+      for (let i = 1; i <= n; i++) { //i=1
+        let str = ''; // str=''
+        for (let j = 1; j <= stars; j++) { //j =1
+
+          if (j > n - i && j < n + i) { //
+            str += '#'
+          } else {
+            str += ' ';
+          }
+        }
+        console.log(str);
+
+      }
+    }
+    console.log(playGround(5));
+
+  </script>
+</body>
+
+</html>
