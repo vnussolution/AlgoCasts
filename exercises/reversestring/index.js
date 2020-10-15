@@ -19,12 +19,13 @@ function reverse(str) {
     // temp = str.split('').reverse().join('');
 
     temp = str.split('').reduce((t, c) => {
-        return c + t;
+        return c + t+'';
     }, '');
 
-    console.log(temp, str);
+   // console.log(temp, str);
 
     return temp;
+    
 }
 
 module.exports = reverse;

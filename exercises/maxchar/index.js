@@ -26,31 +26,48 @@ function maxChar(str) {
   // return letter;
 
   ///another way, this method creates a object map, and then loop all the items to find the biggest count
-  const obj = {};
+  // const obj = {};
 
-  //create obj map
-  for (const i of str) {
-    // if (obj[i]) {
-    //     obj[i]++;
-    // } else {
-    //     obj[i] = 1;
-    // }
+  // //create obj map
+  // for (const i of str) {
+  //   // if (obj[i]) {
+  //   //     obj[i]++;
+  //   // } else {
+  //   //     obj[i] = 1;
+  //   // }
 
-    obj[i] = obj[i] + 1 || 1;
+  //   obj[i] = obj[i] + 1 || 1;
+  // }
+
+  // let max = 0;
+  // let letter = "";
+  // for (const key in obj) {
+  //   if (max < obj[key]) {
+  //     max = obj[key];
+  //     letter = key;
+  //     console.log(" max = ", max, " letter = ", letter);
+  //   }
+  // }
+
+  // console.log("obj : ", obj, " letter = ", letter);
+  // return obj;
+
+  const chars = {};
+  for(let c of str){
+      chars[c] = chars[c] + 1 || 1 ; 
   }
-
+  
   let max = 0;
-  let letter = "";
-  for (const key in obj) {
-    if (max < obj[key]) {
-      max = obj[key];
-      letter = key;
-      console.log(" max = ", max, " letter = ", letter);
-    }
-  }
+  let maxChar = ''
 
-  console.log("obj : ", obj, " letter = ", letter);
-  return obj;
+  for(let c in chars ){
+      if(chars[c] > max) {
+        max = chars[c];
+        maxChar = c;
+      }
+  }
+  return maxChar;
 }
 
 module.exports = maxChar;
+
